@@ -15,6 +15,7 @@
 		8A0133B11E2651D300641DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0133AF1E2651D300641DB4 /* LaunchScreen.storyboard */; };
 		8A0133BC1E2651D300641DB4 /* splitViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133BB1E2651D300641DB4 /* splitViewControllerTests.swift */; };
 		8A0133C71E2651D300641DB4 /* splitViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133C61E2651D300641DB4 /* splitViewControllerUITests.swift */; };
+		8A0133D51E2657BA00641DB4 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133D41E2657BA00641DB4 /* MasterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8A0133C21E2651D300641DB4 /* splitViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = splitViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0133C61E2651D300641DB4 /* splitViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splitViewControllerUITests.swift; sourceTree = "<group>"; };
 		8A0133C81E2651D300641DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A0133D41E2657BA00641DB4 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				8A0133AD1E2651D300641DB4 /* Assets.xcassets */,
 				8A0133AF1E2651D300641DB4 /* LaunchScreen.storyboard */,
 				8A0133B21E2651D300641DB4 /* Info.plist */,
+				8A0133D41E2657BA00641DB4 /* MasterTableViewCell.swift */,
 			);
 			path = splitViewController;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				8A0133A91E2651D300641DB4 /* DetailViewController.swift in Sources */,
 				8A0133A71E2651D300641DB4 /* MasterViewController.swift in Sources */,
 				8A0133A51E2651D300641DB4 /* AppDelegate.swift in Sources */,
+				8A0133D51E2657BA00641DB4 /* MasterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
