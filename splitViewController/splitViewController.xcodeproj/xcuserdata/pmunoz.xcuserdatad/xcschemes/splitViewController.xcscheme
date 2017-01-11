@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8A0133241E26496B00641DB4"
-               BuildableName = "splitVC.app"
-               BlueprintName = "splitVC"
-               ReferencedContainer = "container:splitVC.xcodeproj">
+               BlueprintIdentifier = "8A0133A01E2651D300641DB4"
+               BuildableName = "splitViewController.app"
+               BlueprintName = "splitViewController"
+               ReferencedContainer = "container:splitViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8A0133381E26496B00641DB4"
-               BuildableName = "splitVCTests.xctest"
-               BlueprintName = "splitVCTests"
-               ReferencedContainer = "container:splitVC.xcodeproj">
+               BlueprintIdentifier = "8A0133B61E2651D300641DB4"
+               BuildableName = "splitViewControllerTests.xctest"
+               BlueprintName = "splitViewControllerTests"
+               ReferencedContainer = "container:splitViewController.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8A0133431E26496B00641DB4"
-               BuildableName = "splitVCUITests.xctest"
-               BlueprintName = "splitVCUITests"
-               ReferencedContainer = "container:splitVC.xcodeproj">
+               BlueprintIdentifier = "8A0133C11E2651D300641DB4"
+               BuildableName = "splitViewControllerUITests.xctest"
+               BlueprintName = "splitViewControllerUITests"
+               ReferencedContainer = "container:splitViewController.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8A0133241E26496B00641DB4"
-            BuildableName = "splitVC.app"
-            BlueprintName = "splitVC"
-            ReferencedContainer = "container:splitVC.xcodeproj">
+            BlueprintIdentifier = "8A0133A01E2651D300641DB4"
+            BuildableName = "splitViewController.app"
+            BlueprintName = "splitViewController"
+            ReferencedContainer = "container:splitViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8A0133241E26496B00641DB4"
-            BuildableName = "splitVC.app"
-            BlueprintName = "splitVC"
-            ReferencedContainer = "container:splitVC.xcodeproj">
+            BlueprintIdentifier = "8A0133A01E2651D300641DB4"
+            BuildableName = "splitViewController.app"
+            BlueprintName = "splitViewController"
+            ReferencedContainer = "container:splitViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8A0133241E26496B00641DB4"
-            BuildableName = "splitVC.app"
-            BlueprintName = "splitVC"
-            ReferencedContainer = "container:splitVC.xcodeproj">
+            BlueprintIdentifier = "8A0133A01E2651D300641DB4"
+            BuildableName = "splitViewController.app"
+            BlueprintName = "splitViewController"
+            ReferencedContainer = "container:splitViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

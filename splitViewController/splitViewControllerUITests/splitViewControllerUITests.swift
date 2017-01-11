@@ -1,6 +1,6 @@
 //
-//  splitVCUITests.swift
-//  splitVCUITests
+//  splitViewControllerUITests.swift
+//  splitViewControllerUITests
 //
 //  Created by Pia Muñoz on 11/1/17.
 //  Copyright © 2017 iOSWorkshops. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class splitVCUITests: XCTestCase {
+class splitViewControllerUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

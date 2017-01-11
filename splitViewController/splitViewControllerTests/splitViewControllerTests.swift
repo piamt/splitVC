@@ -1,15 +1,15 @@
 //
-//  splitVCTests.swift
-//  splitVCTests
+//  splitViewControllerTests.swift
+//  splitViewControllerTests
 //
 //  Created by Pia Muñoz on 11/1/17.
 //  Copyright © 2017 iOSWorkshops. All rights reserved.
 //
 
 import XCTest
-@testable import splitVC
+@testable import splitViewController
 
-class splitVCTests: XCTestCase {
+class splitViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
