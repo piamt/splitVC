@@ -10,15 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+    @IBOutlet weak var imageView: UIView! //TODO: Ad image view
+    @IBOutlet weak var textView: UIView! //TODO: Add text view
+    @IBOutlet weak var switchView: UIView! //TODO:Add switch
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail
-            }
+
+            //Use the detail in textView
+            
         }
     }
 
@@ -26,6 +27,10 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        
+        //Configure image, text and switch
+        imageView.addImage(imageName: "dog")
+        textView.addText(text: detailItem!)
     }
 
     override func didReceiveMemoryWarning() {

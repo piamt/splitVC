@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478C2F837A9B0E1DF9E79A1D /* Pods_splitViewControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD017265C9392092551AB67 /* Pods_splitViewControllerTests.framework */; };
+		75EBC05A12B9189558F06D5D /* Pods_splitViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D26CD374B33BA585497A5BF /* Pods_splitViewController.framework */; };
+		82F2E42DB605A07B26701DB9 /* Pods_splitViewControllerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66B121CE0EFAEE53D1205E1 /* Pods_splitViewControllerUITests.framework */; };
 		8A0133A51E2651D300641DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133A41E2651D300641DB4 /* AppDelegate.swift */; };
 		8A0133A71E2651D300641DB4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133A61E2651D300641DB4 /* MasterViewController.swift */; };
 		8A0133A91E2651D300641DB4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133A81E2651D300641DB4 /* DetailViewController.swift */; };
@@ -16,6 +19,7 @@
 		8A0133BC1E2651D300641DB4 /* splitViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133BB1E2651D300641DB4 /* splitViewControllerTests.swift */; };
 		8A0133C71E2651D300641DB4 /* splitViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133C61E2651D300641DB4 /* splitViewControllerUITests.swift */; };
 		8A0133D51E2657BA00641DB4 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133D41E2657BA00641DB4 /* MasterTableViewCell.swift */; };
+		8A0133D71E266BAD00641DB4 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0133D61E266BAD00641DB4 /* UIView+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D26CD374B33BA585497A5BF /* Pods_splitViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splitViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E7ACF24222E29CBA09FC61 /* Pods-splitViewControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitViewControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-splitViewControllerUITests/Pods-splitViewControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		42337D8E76C810C6175F998D /* Pods-splitViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splitViewController/Pods-splitViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0133A11E2651D300641DB4 /* splitViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0133A41E2651D300641DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A0133A61E2651D300641DB4 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +58,13 @@
 		8A0133C61E2651D300641DB4 /* splitViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splitViewControllerUITests.swift; sourceTree = "<group>"; };
 		8A0133C81E2651D300641DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A0133D41E2657BA00641DB4 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
+		8A0133D61E266BAD00641DB4 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+extension.swift"; path = "Utils/UIView+extension.swift"; sourceTree = "<group>"; };
+		993DF60BED66CF293C297C3A /* Pods-splitViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-splitViewController/Pods-splitViewController.release.xcconfig"; sourceTree = "<group>"; };
+		A66B121CE0EFAEE53D1205E1 /* Pods_splitViewControllerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splitViewControllerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE01D5032502F6F7A15A7F39 /* Pods-splitViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splitViewControllerTests/Pods-splitViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE6B7F46D8683149AD64C574 /* Pods-splitViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-splitViewControllerTests/Pods-splitViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		E9C7599E044BD11291DF29FA /* Pods-splitViewControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitViewControllerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splitViewControllerUITests/Pods-splitViewControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FFD017265C9392092551AB67 /* Pods_splitViewControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splitViewControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EBC05A12B9189558F06D5D /* Pods_splitViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478C2F837A9B0E1DF9E79A1D /* Pods_splitViewControllerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F2E42DB605A07B26701DB9 /* Pods_splitViewControllerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +102,8 @@
 				8A0133BA1E2651D300641DB4 /* splitViewControllerTests */,
 				8A0133C51E2651D300641DB4 /* splitViewControllerUITests */,
 				8A0133A21E2651D300641DB4 /* Products */,
+				FE8BF8D5EC0FC852C9556AF1 /* Pods */,
+				9EC2C7F4C052F242C1F7AD21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +120,7 @@
 		8A0133A31E2651D300641DB4 /* splitViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8A46D1AD1E267B4B00CEBCB7 /* Utils */,
 				8A0133A41E2651D300641DB4 /* AppDelegate.swift */,
 				8A0133A61E2651D300641DB4 /* MasterViewController.swift */,
 				8A0133A81E2651D300641DB4 /* DetailViewController.swift */,
@@ -131,6 +151,37 @@
 			path = splitViewControllerUITests;
 			sourceTree = "<group>";
 		};
+		8A46D1AD1E267B4B00CEBCB7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8A0133D61E266BAD00641DB4 /* UIView+extension.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		9EC2C7F4C052F242C1F7AD21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D26CD374B33BA585497A5BF /* Pods_splitViewController.framework */,
+				FFD017265C9392092551AB67 /* Pods_splitViewControllerTests.framework */,
+				A66B121CE0EFAEE53D1205E1 /* Pods_splitViewControllerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE8BF8D5EC0FC852C9556AF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42337D8E76C810C6175F998D /* Pods-splitViewController.debug.xcconfig */,
+				993DF60BED66CF293C297C3A /* Pods-splitViewController.release.xcconfig */,
+				BE01D5032502F6F7A15A7F39 /* Pods-splitViewControllerTests.debug.xcconfig */,
+				DE6B7F46D8683149AD64C574 /* Pods-splitViewControllerTests.release.xcconfig */,
+				E9C7599E044BD11291DF29FA /* Pods-splitViewControllerUITests.debug.xcconfig */,
+				40E7ACF24222E29CBA09FC61 /* Pods-splitViewControllerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A0133CB1E2651D300641DB4 /* Build configuration list for PBXNativeTarget "splitViewController" */;
 			buildPhases = (
+				4A019FB565F31DDB822EC0FA /* [CP] Check Pods Manifest.lock */,
 				8A01339D1E2651D300641DB4 /* Sources */,
 				8A01339E1E2651D300641DB4 /* Frameworks */,
 				8A01339F1E2651D300641DB4 /* Resources */,
+				AF87CD141B871ADB3575DEF4 /* [CP] Embed Pods Frameworks */,
+				659950AED7235F8F6C7D5B31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A0133CE1E2651D300641DB4 /* Build configuration list for PBXNativeTarget "splitViewControllerTests" */;
 			buildPhases = (
+				4EA319052A8E433BBEA43B96 /* [CP] Check Pods Manifest.lock */,
 				8A0133B31E2651D300641DB4 /* Sources */,
 				8A0133B41E2651D300641DB4 /* Frameworks */,
 				8A0133B51E2651D300641DB4 /* Resources */,
+				E428B11BE3518C1B3344CE57 /* [CP] Embed Pods Frameworks */,
+				6A38DB913E61F6BE0D404A25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A0133D11E2651D300641DB4 /* Build configuration list for PBXNativeTarget "splitViewControllerUITests" */;
 			buildPhases = (
+				0CAED52F0B3E3500F32E9A4B /* [CP] Check Pods Manifest.lock */,
 				8A0133BE1E2651D300641DB4 /* Sources */,
 				8A0133BF1E2651D300641DB4 /* Frameworks */,
 				8A0133C01E2651D300641DB4 /* Resources */,
+				860B58984032B525506210FC /* [CP] Embed Pods Frameworks */,
+				AE23CBB4E660E8A479CE8141 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,11 +323,150 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CAED52F0B3E3500F32E9A4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A019FB565F31DDB822EC0FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4EA319052A8E433BBEA43B96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		659950AED7235F8F6C7D5B31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-splitViewController/Pods-splitViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A38DB913E61F6BE0D404A25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-splitViewControllerTests/Pods-splitViewControllerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		860B58984032B525506210FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-splitViewControllerUITests/Pods-splitViewControllerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE23CBB4E660E8A479CE8141 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-splitViewControllerUITests/Pods-splitViewControllerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF87CD141B871ADB3575DEF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-splitViewController/Pods-splitViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E428B11BE3518C1B3344CE57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-splitViewControllerTests/Pods-splitViewControllerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A01339D1E2651D300641DB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0133D71E266BAD00641DB4 /* UIView+extension.swift in Sources */,
 				8A0133A91E2651D300641DB4 /* DetailViewController.swift in Sources */,
 				8A0133A71E2651D300641DB4 /* MasterViewController.swift in Sources */,
 				8A0133A51E2651D300641DB4 /* AppDelegate.swift in Sources */,
@@ -421,7 +620,9 @@
 		};
 		8A0133CC1E2651D300641DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42337D8E76C810C6175F998D /* Pods-splitViewController.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L53KSQC6DZ;
 				INFOPLIST_FILE = splitViewController/Info.plist;
@@ -434,7 +635,9 @@
 		};
 		8A0133CD1E2651D300641DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 993DF60BED66CF293C297C3A /* Pods-splitViewController.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L53KSQC6DZ;
 				INFOPLIST_FILE = splitViewController/Info.plist;
@@ -447,6 +650,7 @@
 		};
 		8A0133CF1E2651D300641DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE01D5032502F6F7A15A7F39 /* Pods-splitViewControllerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +666,7 @@
 		};
 		8A0133D01E2651D300641DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6B7F46D8683149AD64C574 /* Pods-splitViewControllerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,6 +682,7 @@
 		};
 		8A0133D21E2651D300641DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9C7599E044BD11291DF29FA /* Pods-splitViewControllerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L53KSQC6DZ;
@@ -491,6 +697,7 @@
 		};
 		8A0133D31E2651D300641DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40E7ACF24222E29CBA09FC61 /* Pods-splitViewControllerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L53KSQC6DZ;
@@ -522,6 +729,7 @@
 				8A0133CD1E2651D300641DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A0133CE1E2651D300641DB4 /* Build configuration list for PBXNativeTarget "splitViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +738,7 @@
 				8A0133D01E2651D300641DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A0133D11E2651D300641DB4 /* Build configuration list for PBXNativeTarget "splitViewControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +747,7 @@
 				8A0133D31E2651D300641DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

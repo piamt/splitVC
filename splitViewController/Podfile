@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'splitViewController' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for splitViewController
+
+  pod 'Cartography'
+
+  target 'splitViewControllerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'splitViewControllerUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
