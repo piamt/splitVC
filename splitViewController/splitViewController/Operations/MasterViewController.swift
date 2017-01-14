@@ -9,10 +9,16 @@
 import UIKit
 import Deferred
 
+protocol DetailDelegate: class {
+    func dataReloadForRow(_ row: CLong, image: UIImage, text: String, switchValue: Bool)
+}
+
 class MasterViewController: UITableViewController {
 
     //MARK: - Stored properties
     var detailViewController: DetailViewController? = nil
+    weak var delegate: DetailDelegate? = nil
+    var currentRowNumber = 0
 
     //MARK: - UIViewController lifecycle
     override func viewDidLoad() {
@@ -23,7 +29,8 @@ class MasterViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        APIClient.client.webServiceSetup(imageTopic: "music")
+        //API setup
+        APIClient.client.setup(imageTopic: "music", numberOfTries: 3)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +54,8 @@ class MasterViewController: UITableViewController {
                     controller.imageItem = cell.randomImage.image
                     controller.switchItem = cell.customSwitch.isOn
                     cell.delegate = controller
+                    self.delegate = controller
+                    currentRowNumber = cell.rowNumber!
                 }
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
@@ -70,26 +79,39 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MasterTableViewCell
         let rowNumber = indexPath.row
-        //First look for the row in Core Data
+        //First look for the row in Data Manager
         let cellResult = DataManager.manager.fetchCellForRow(rowNumber)
         switch cellResult {
         case .success(let model):
-            cell.drawCell(row: rowNumber, image: model.image, text: model.text, switchValue: model.switchValue)
+            cell.drawCell(row: rowNumber, image: model.image, text: model.text, switchValue: model.switchValue, switchEnabled: model.switchEnabled)
         case .failure( _):
             // If never displayed:
-            // 1. Draw cell "loading"
+            // 1. Draw loading cell
             cell.loadingCell(row: rowNumber)
-            // 2. Request APIClient for new data (text and image), store it and display
+            // 2. Request APIClient for new data
             askProviderForRow(rowNumber)
         }
         return cell
     }
     
-    //MARK: - Core Data
+    //MARK: - Data Manager
     func askProviderForRow(_ rowNumber: CLong) {
-        APIClient.client.fetchDataForRow(rowNumber) { _ in
-            // 3. When new data arrives, reload table view
-            self.tableView.reloadData()
+        APIClient.client.requestDataForRow(rowNumber) { result in
+            // 3. When new data arrives, reload table view and detail
+             self.tableView.reloadData()
+            switch result {
+            case .success(let model):
+                self.detailReload(rowNumber: rowNumber, image: model.image, text: model.text, switchValue: model.switchValue, switchEnabled: model.switchEnabled)
+            case .failure( _):
+                break
+            }
+        }
+    }
+    
+    //MARK: - Delegate methods
+    func detailReload(rowNumber: CLong, image: UIImage, text: String, switchValue: Bool, switchEnabled: Bool) {
+        if rowNumber == currentRowNumber {
+            self.delegate?.dataReloadForRow(rowNumber, image: image, text: text, switchValue: switchValue)
         }
     }
 }

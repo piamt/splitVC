@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		0E08A32A1E294C9700DD5E7A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E08A3281E294C9700DD5E7A /* Model.xcdatamodeld */; };
 		0E08A3301E294ED300DD5E7A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E08A32F1E294ED300DD5E7A /* DataController.swift */; };
+		0E1C18C11E2A4E5D003F95FE /* RequestDataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C18C01E2A4E5D003F95FE /* RequestDataInteractor.swift */; };
+		0E1C18C51E2A585F003F95FE /* Deferred+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C18C41E2A585F003F95FE /* Deferred+extension.swift */; };
 		0E7C36F41E283D37006FF1A5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C36F31E283D37006FF1A5 /* APIClient.swift */; };
-		0E7C36F61E2847AB006FF1A5 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C36F51E2847AB006FF1A5 /* String+extension.swift */; };
 		0EC029CF1E296B870050E1B7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC029CE1E296B870050E1B7 /* CoreDataManager.swift */; };
 		0EC02A0E1E2998D60050E1B7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02A0C1E2998D60050E1B7 /* DetailViewController.swift */; };
 		0EC02A0F1E2998D60050E1B7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02A0D1E2998D60050E1B7 /* MasterViewController.swift */; };
@@ -49,8 +50,9 @@
 		0D26CD374B33BA585497A5BF /* Pods_splitViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splitViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E08A3291E294C9700DD5E7A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0E08A32F1E294ED300DD5E7A /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = Managers/DataController.swift; sourceTree = "<group>"; };
+		0E1C18C01E2A4E5D003F95FE /* RequestDataInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestDataInteractor.swift; path = Core/Networking/RequestDataInteractor.swift; sourceTree = "<group>"; };
+		0E1C18C41E2A585F003F95FE /* Deferred+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Deferred+extension.swift"; path = "Utils/Deferred+extension.swift"; sourceTree = "<group>"; };
 		0E7C36F31E283D37006FF1A5 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Core/Networking/APIClient.swift; sourceTree = "<group>"; };
-		0E7C36F51E2847AB006FF1A5 /* String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+extension.swift"; path = "Utils/String+extension.swift"; sourceTree = "<group>"; };
 		0EC029CE1E296B870050E1B7 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Managers/CoreDataManager.swift; sourceTree = "<group>"; };
 		0EC02A0C1E2998D60050E1B7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Operations/DetailViewController.swift; sourceTree = "<group>"; };
 		0EC02A0D1E2998D60050E1B7 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = Operations/MasterViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				0E7C36F31E283D37006FF1A5 /* APIClient.swift */,
+				0E1C18C01E2A4E5D003F95FE /* RequestDataInteractor.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -244,7 +247,7 @@
 		8A46D1AD1E267B4B00CEBCB7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0E7C36F51E2847AB006FF1A5 /* String+extension.swift */,
+				0E1C18C41E2A585F003F95FE /* Deferred+extension.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -556,9 +559,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7C36F61E2847AB006FF1A5 /* String+extension.swift in Sources */,
+				0E1C18C11E2A4E5D003F95FE /* RequestDataInteractor.swift in Sources */,
 				0E7C36F41E283D37006FF1A5 /* APIClient.swift in Sources */,
 				0EC02A0F1E2998D60050E1B7 /* MasterViewController.swift in Sources */,
+				0E1C18C51E2A585F003F95FE /* Deferred+extension.swift in Sources */,
 				0EC02A151E29AAC80050E1B7 /* CellModel.swift in Sources */,
 				0E08A32A1E294C9700DD5E7A /* Model.xcdatamodeld in Sources */,
 				0E08A3301E294ED300DD5E7A /* DataController.swift in Sources */,

@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-protocol SynchroDelegate: class {
+protocol SwitchDelegate: class {
     func switchValueForRow(_ row: CLong, value: Bool)
-    func dataReloadForRow(_ row: CLong, image: UIImage, text: String, switchValue: Bool)
 }
 
 class MasterTableViewCell: UITableViewCell {
@@ -22,24 +21,21 @@ class MasterTableViewCell: UITableViewCell {
     @IBOutlet weak var customSwitch: UISwitch!
     
     //MARK: - Stored Properties
-    weak var delegate: SynchroDelegate? = nil
+    weak var delegate: SwitchDelegate? = nil
     var rowNumber: CLong? = nil
     
     //MARK: - Public API
-    func drawCell(row: CLong, image: UIImage, text: String, switchValue: Bool) {
+    func drawCell(row: CLong, image: UIImage, text: String, switchValue: Bool, switchEnabled: Bool) {
         rowNumber = row
         randomImage.image = nil
         randomImage.image = image
         randomLabel.text = text
-        randomLabel.font = UIFont.systemFont(ofSize: 14)
         customSwitch.setOn(switchValue, animated: false)
-        customSwitch.isUserInteractionEnabled = true
-        dedailReload(image: image, text: text, switchValue: switchValue)
+        customSwitch.isUserInteractionEnabled = switchEnabled
     }
     
     func loadingCell(row: CLong) {
-        drawCell(row: row, image: UIImage(named: "dog")!, text: "Loading...", switchValue: false)
-        customSwitch.isUserInteractionEnabled = false
+        drawCell(row: row, image: UIImage(named: "dog")!, text: "Loading...", switchValue: false, switchEnabled: false)
     }
     
     //MARK: - Delegate methods
@@ -47,9 +43,5 @@ class MasterTableViewCell: UITableViewCell {
         let switchObject = sender as! UISwitch
         DataManager.manager.updateSwitchForRow(rowNumber!, newValue: switchObject.isOn)
         self.delegate?.switchValueForRow(rowNumber!, value: switchObject.isOn)
-    }
-    
-    func dedailReload(image: UIImage, text: String, switchValue: Bool) {
-        self.delegate?.dataReloadForRow(rowNumber!, image: image, text: text, switchValue: switchValue)
     }
 }

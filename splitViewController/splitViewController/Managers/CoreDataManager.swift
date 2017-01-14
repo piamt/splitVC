@@ -14,6 +14,7 @@ class CoreDataManager {
     
     //MARK: - Singleton
     static let manager = CoreDataManager()
+    fileprivate init() { }
     
     //MARK: - Public API
     func feedRow(_ rowNumber: CLong, image: UIImage, text: String, switchValue: Bool) {

@@ -13,26 +13,35 @@ class DataManager {
     
     //MARK: - Singleton
     static let manager = DataManager()
+    fileprivate init() { }
     
     //MARK: - Stored properties
-    var array = [CellModel]()
+    var dictionary = [CLong: CellModel]()
     
     //MARK: - Public API
-    func feedRow(image: UIImage, text: String, switchValue: Bool) {
-        array.append(CellModel(image: image, text: text, switchValue: switchValue))
+    func feedRow(_ row: CLong, image: UIImage, text: String, switchValue: Bool, switchEnabled: Bool) {
+        dictionary[row] = CellModel(image: image, text: text, switchValue: switchValue, switchEnabled: switchEnabled)
+    }
+    
+    func feedRowLoading(_ row: CLong) {
+        dictionary[row] = CellModel()
+    }
+    
+    func feedRowError(_ row: CLong) {
+        let model = CellModel()
+        model.setupError()
+        dictionary[row] = model
     }
     
     func fetchCellForRow(_ row: CLong) -> TaskResult<CellModel> {
-        
-        if array.count > row {
-            return .success(array[row])
+        if let element = dictionary[row] {
+            return .success(element)
         } else {
-            return .failure(APIError.unableToFetchData)
+            return .failure(APIError.resourceNotFound)
         }
-//        return .success(CellModel(image: UIImage(named: "dog")!, text: "test", switchValue: false))
     }
     
     func updateSwitchForRow(_ row: CLong, newValue: Bool) {
-        array[row].switchValue = newValue
+        dictionary[row]?.switchValue = newValue
     }
 }

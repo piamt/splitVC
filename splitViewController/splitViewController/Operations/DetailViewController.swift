@@ -38,11 +38,9 @@ class DetailViewController: UIViewController {
     
     //MARK: - Configure UI
     func configureView() {
-        // Update the user interface for the detail item.
         if let text = self.textItem,
             let textView = self.textView {
             textView.text = text
-            textView.font = UIFont.systemFont(ofSize: 16)
         }
         
         if let image = self.imageItem,
@@ -59,38 +57,42 @@ class DetailViewController: UIViewController {
     
     var textItem: String? {
         didSet {
-            // Update the view.
+            // Update the view
             self.configureView()
         }
     }
     
     var imageItem: UIImage? {
         didSet {
-            // Update the view.
+            // Update the view
             self.configureView()
         }
     }
     
     var switchItem: Bool? {
         didSet {
-            // Update the view.
+            // Update the view
             self.configureView()
         }
     }
 }
 
-extension DetailViewController: SynchroDelegate {
+extension DetailViewController: SwitchDelegate {
     
     func switchValueForRow(_ row: CLong, value: Bool) {
         if row == rowNumber {
             switchView.setOn(value, animated: true)
         }
     }
+}
+
+extension DetailViewController: DetailDelegate {
     
     func dataReloadForRow(_ row: CLong, image: UIImage, text: String, switchValue: Bool) {
-        if row == rowNumber {
-            imageItem = image
+        if let rowNumber = self.rowNumber,
+            row == rowNumber {
             textItem = text
+            imageItem = image
             switchItem = switchValue
         }
     }
