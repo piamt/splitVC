@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Deferred
 
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
 
+    //MARK: - UIViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,12 +34,16 @@ class MasterViewController: UITableViewController {
     }
 
     // MARK: - Segues
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
+            if self.tableView.indexPathForSelectedRow != nil {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = "Here comes the text and image of the selected element in the table"
+                if let cell = sender as? MasterTableViewCell {
+                    controller.textItem = cell.randomLabel.text
+                    controller.imageItem = cell.randomImage.image
+                    controller.switchItem = cell.customSwitch.isOn
+                    cell.delegate = controller
+                }
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -59,9 +65,28 @@ class MasterViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MasterTableViewCell
-
-        cell.randomLabel.text = "Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro."
+        let rowNumber = indexPath.row
+        //First look for the row in Core Data
+        let cellResult = CoreDataManager.manager.fetchCellForRow(rowNumber)
+        switch cellResult {
+        case .success(let entity):
+            cell.drawCell(row: rowNumber, image: UIImage(data: entity.imageData as! Data)!,
+                            text: entity.text!, switchValue: entity.switchValue)
+        case .failure( _):
+            // If never displayed:
+            // 1. Draw cell "loading"
+            cell.loadingCell(row: rowNumber)
+            // 2. Request APIClient for new data (text and image), store it and display
+            askProviderForRow(rowNumber)
+        }
         return cell
     }
+    
+    //MARK: - Core Data
+    func askProviderForRow(_ rowNumber: CLong) {
+        APIClient.client.fetchDataForRow(rowNumber) { _ in
+            // 3. When new data arrives, reload table view
+            self.tableView.reloadData()
+        }
+    }
 }
-

@@ -8,6 +8,9 @@ target 'splitViewController' do
   # Pods for splitViewController
 
   pod 'Cartography'
+  pod 'ObjectMapper'
+  pod 'Alamofire'
+  pod 'BNRDeferred', '3.0.0-rc.1'
 
   target 'splitViewControllerTests' do
     inherit! :search_paths
