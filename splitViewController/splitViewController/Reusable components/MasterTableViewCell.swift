@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 protocol SynchroDelegate: class {
-    func switchValueChangedTo(_ value: Bool)
+    func switchValueForRow(_ row: CLong, value: Bool)
+    func dataReloadForRow(_ row: CLong, image: UIImage, text: String, switchValue: Bool)
 }
 
 class MasterTableViewCell: UITableViewCell {
@@ -22,16 +23,18 @@ class MasterTableViewCell: UITableViewCell {
     
     //MARK: - Stored Properties
     weak var delegate: SynchroDelegate? = nil
+    var rowNumber: CLong? = nil
     
     //MARK: - Public API
     func drawCell(row: CLong, image: UIImage, text: String, switchValue: Bool) {
+        rowNumber = row
         randomImage.image = nil
         randomImage.image = image
         randomLabel.text = text
         randomLabel.font = UIFont.systemFont(ofSize: 14)
         customSwitch.setOn(switchValue, animated: false)
-        customSwitch.restorationIdentifier = "\(row)"
         customSwitch.isUserInteractionEnabled = true
+        dedailReload(image: image, text: text, switchValue: switchValue)
     }
     
     func loadingCell(row: CLong) {
@@ -39,18 +42,14 @@ class MasterTableViewCell: UITableViewCell {
         customSwitch.isUserInteractionEnabled = false
     }
     
-    func disableSwitch() {
-        customSwitch.isUserInteractionEnabled = false
-    }
-    
-    func enableSwitch() {
-        customSwitch.isUserInteractionEnabled = true
-    }
-    
+    //MARK: - Delegate methods
     @IBAction func switchValueChanged(_ sender: Any) {
         let switchObject = sender as! UISwitch
-        DataManager.manager.updateSwitchForRow(CLong(switchObject.restorationIdentifier!)!, newValue: switchObject.isOn)
-        
-        self.delegate?.switchValueChangedTo(switchObject.isOn)
+        DataManager.manager.updateSwitchForRow(rowNumber!, newValue: switchObject.isOn)
+        self.delegate?.switchValueForRow(rowNumber!, value: switchObject.isOn)
+    }
+    
+    func dedailReload(image: UIImage, text: String, switchValue: Bool) {
+        self.delegate?.dataReloadForRow(rowNumber!, image: image, text: text, switchValue: switchValue)
     }
 }

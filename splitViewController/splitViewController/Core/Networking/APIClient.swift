@@ -25,29 +25,31 @@ class APIClient {
     //MARK: - Stored Properties
     static let client = APIClient()
     
+    var textUrl: String?
+    var imageUrl: String?
+    
     fileprivate init() {
-        
     }
     
     //MARK: - Web services
+    func webServiceSetup(textUrl: String = "http://schematic-ipsum.herokuapp.com", imageUrl: String = "http://loremflickr.com/340/340", imageTopic: String = "animals") {
+        
+        self.textUrl = textUrl
+        self.imageUrl = "\(imageUrl)/\(imageTopic)"
+    }
     
     //TODO: When one or both services fails, retry or show error!
     func fetchDataForRow(_ row: CLong, onCompletion: @escaping (TaskResult<Void>) -> Void) {
         fetchRandomText { result in
             switch result {
             case .failure(let error):
-                print(error)
                 onCompletion(.failure(APIError.unableToFetchData))
             case .success(let text):
-                print(text)
                 self.fetchRandomImage(onCompletion: { result in
                     switch result {
                     case .failure(let error):
-                        print(error)
                         onCompletion(.failure(APIError.unableToFetchData))
                     case .success(let image):
-                        print(image)
-                        
                         DataManager.manager.feedRow(image: image, text: text, switchValue: false)
                         onCompletion(.success())
                     }
@@ -58,7 +60,7 @@ class APIClient {
     
     fileprivate func fetchRandomText(onCompletion: @escaping (TaskResult<String>) -> Void) {
         
-        Alamofire.request("http://schematic-ipsum.herokuapp.com",
+        Alamofire.request(textUrl!,
                           method: .post,
                           parameters: ["type" : "string"] as [String: Any],
                           encoding: JSONEncoding.default)
@@ -76,7 +78,7 @@ class APIClient {
     }
     
     fileprivate func fetchRandomImage(onCompletion: @escaping (TaskResult<UIImage>) -> Void) {
-        let imageURL = URL(string: "http://loremflickr.com/340/340/animals")
+        let imageURL = URL(string: imageUrl!)
         if let url = imageURL {
             DispatchQueue.global(qos: .userInitiated).async {
                 let imageData = NSData(contentsOf: url)

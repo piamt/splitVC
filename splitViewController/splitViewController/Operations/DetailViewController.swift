@@ -80,7 +80,18 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: SynchroDelegate {
-    func switchValueChangedTo(_ value: Bool) {
-        switchView.setOn(value, animated: true)
+    
+    func switchValueForRow(_ row: CLong, value: Bool) {
+        if row == rowNumber {
+            switchView.setOn(value, animated: true)
+        }
+    }
+    
+    func dataReloadForRow(_ row: CLong, image: UIImage, text: String, switchValue: Bool) {
+        if row == rowNumber {
+            imageItem = image
+            textItem = text
+            switchItem = switchValue
+        }
     }
 }

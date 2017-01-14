@@ -136,8 +136,7 @@
 		0E08A32E1E294EA100DD5E7A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				0E08A32F1E294ED300DD5E7A /* DataController.swift */,
-				0EC029CE1E296B870050E1B7 /* CoreDataManager.swift */,
+				0EC02A181E29AF870050E1B7 /* Core Data version */,
 				0EC02A161E29AB6E0050E1B7 /* DataManager.swift */,
 			);
 			name = Managers;
@@ -174,6 +173,15 @@
 				0EC02A141E29AAC80050E1B7 /* CellModel.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0EC02A181E29AF870050E1B7 /* Core Data version */ = {
+			isa = PBXGroup;
+			children = (
+				0EC029CE1E296B870050E1B7 /* CoreDataManager.swift */,
+				0E08A32F1E294ED300DD5E7A /* DataController.swift */,
+			);
+			name = "Core Data version";
 			sourceTree = "<group>";
 		};
 		8A0133981E2651D300641DB4 = {

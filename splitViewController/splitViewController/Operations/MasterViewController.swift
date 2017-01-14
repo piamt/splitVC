@@ -22,6 +22,8 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        APIClient.client.webServiceSetup(imageTopic: "music")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +42,7 @@ class MasterViewController: UITableViewController {
             if self.tableView.indexPathForSelectedRow != nil {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 if let cell = sender as? MasterTableViewCell {
+                    controller.rowNumber = cell.rowNumber
                     controller.textItem = cell.randomLabel.text
                     controller.imageItem = cell.randomImage.image
                     controller.switchItem = cell.customSwitch.isOn
@@ -71,8 +74,7 @@ class MasterViewController: UITableViewController {
         let cellResult = DataManager.manager.fetchCellForRow(rowNumber)
         switch cellResult {
         case .success(let model):
-            cell.drawCell(row: rowNumber, image: model.image,
-                            text: model.text, switchValue: model.switchValue)
+            cell.drawCell(row: rowNumber, image: model.image, text: model.text, switchValue: model.switchValue)
         case .failure( _):
             // If never displayed:
             // 1. Draw cell "loading"
