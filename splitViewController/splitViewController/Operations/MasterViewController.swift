@@ -11,6 +11,7 @@ import Deferred
 
 class MasterViewController: UITableViewController {
 
+    //MARK: - Stored properties
     var detailViewController: DetailViewController? = nil
 
     //MARK: - UIViewController lifecycle
@@ -67,11 +68,11 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MasterTableViewCell
         let rowNumber = indexPath.row
         //First look for the row in Core Data
-        let cellResult = CoreDataManager.manager.fetchCellForRow(rowNumber)
+        let cellResult = DataManager.manager.fetchCellForRow(rowNumber)
         switch cellResult {
-        case .success(let entity):
-            cell.drawCell(row: rowNumber, image: UIImage(data: entity.imageData as! Data)!,
-                            text: entity.text!, switchValue: entity.switchValue)
+        case .success(let model):
+            cell.drawCell(row: rowNumber, image: model.image,
+                            text: model.text, switchValue: model.switchValue)
         case .failure( _):
             // If never displayed:
             // 1. Draw cell "loading"

@@ -49,7 +49,7 @@ class MasterTableViewCell: UITableViewCell {
     
     @IBAction func switchValueChanged(_ sender: Any) {
         let switchObject = sender as! UISwitch
-        CoreDataManager.manager.updateSwitchForRow(CLong(switchObject.restorationIdentifier!)!, newValue: switchObject.isOn)
+        DataManager.manager.updateSwitchForRow(CLong(switchObject.restorationIdentifier!)!, newValue: switchObject.isOn)
         
         self.delegate?.switchValueChangedTo(switchObject.isOn)
     }

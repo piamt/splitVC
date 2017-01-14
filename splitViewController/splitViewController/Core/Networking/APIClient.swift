@@ -48,7 +48,7 @@ class APIClient {
                     case .success(let image):
                         print(image)
                         
-                        CoreDataManager.manager.feedRow(row, image: image, text: text, switchValue: false)
+                        DataManager.manager.feedRow(image: image, text: text, switchValue: false)
                         onCompletion(.success())
                     }
                 })

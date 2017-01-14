@@ -14,6 +14,8 @@
 		0EC029CF1E296B870050E1B7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC029CE1E296B870050E1B7 /* CoreDataManager.swift */; };
 		0EC02A0E1E2998D60050E1B7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02A0C1E2998D60050E1B7 /* DetailViewController.swift */; };
 		0EC02A0F1E2998D60050E1B7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02A0D1E2998D60050E1B7 /* MasterViewController.swift */; };
+		0EC02A151E29AAC80050E1B7 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02A141E29AAC80050E1B7 /* CellModel.swift */; };
+		0EC02A171E29AB6E0050E1B7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02A161E29AB6E0050E1B7 /* DataManager.swift */; };
 		478C2F837A9B0E1DF9E79A1D /* Pods_splitViewControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD017265C9392092551AB67 /* Pods_splitViewControllerTests.framework */; };
 		75EBC05A12B9189558F06D5D /* Pods_splitViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D26CD374B33BA585497A5BF /* Pods_splitViewController.framework */; };
 		82F2E42DB605A07B26701DB9 /* Pods_splitViewControllerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66B121CE0EFAEE53D1205E1 /* Pods_splitViewControllerUITests.framework */; };
@@ -52,6 +54,8 @@
 		0EC029CE1E296B870050E1B7 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Managers/CoreDataManager.swift; sourceTree = "<group>"; };
 		0EC02A0C1E2998D60050E1B7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Operations/DetailViewController.swift; sourceTree = "<group>"; };
 		0EC02A0D1E2998D60050E1B7 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = Operations/MasterViewController.swift; sourceTree = "<group>"; };
+		0EC02A141E29AAC80050E1B7 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellModel.swift; path = Core/Model/CellModel.swift; sourceTree = "<group>"; };
+		0EC02A161E29AB6E0050E1B7 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = Managers/DataManager.swift; sourceTree = "<group>"; };
 		40E7ACF24222E29CBA09FC61 /* Pods-splitViewControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitViewControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-splitViewControllerUITests/Pods-splitViewControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		42337D8E76C810C6175F998D /* Pods-splitViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splitViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splitViewController/Pods-splitViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0133A11E2651D300641DB4 /* splitViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +138,7 @@
 			children = (
 				0E08A32F1E294ED300DD5E7A /* DataController.swift */,
 				0EC029CE1E296B870050E1B7 /* CoreDataManager.swift */,
+				0EC02A161E29AB6E0050E1B7 /* DataManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 		0E7C36E91E283850006FF1A5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0EC02A131E29AAAB0050E1B7 /* Model */,
 				0E7C36EB1E2838F8006FF1A5 /* Networking */,
 			);
 			name = Core;
@@ -160,6 +166,14 @@
 				8A0133D41E2657BA00641DB4 /* MasterTableViewCell.swift */,
 			);
 			name = "Reusable components";
+			sourceTree = "<group>";
+		};
+		0EC02A131E29AAAB0050E1B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EC02A141E29AAC80050E1B7 /* CellModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		8A0133981E2651D300641DB4 = {
@@ -537,10 +551,12 @@
 				0E7C36F61E2847AB006FF1A5 /* String+extension.swift in Sources */,
 				0E7C36F41E283D37006FF1A5 /* APIClient.swift in Sources */,
 				0EC02A0F1E2998D60050E1B7 /* MasterViewController.swift in Sources */,
+				0EC02A151E29AAC80050E1B7 /* CellModel.swift in Sources */,
 				0E08A32A1E294C9700DD5E7A /* Model.xcdatamodeld in Sources */,
 				0E08A3301E294ED300DD5E7A /* DataController.swift in Sources */,
 				8A0133A51E2651D300641DB4 /* AppDelegate.swift in Sources */,
 				0EC02A0E1E2998D60050E1B7 /* DetailViewController.swift in Sources */,
+				0EC02A171E29AB6E0050E1B7 /* DataManager.swift in Sources */,
 				0EC029CF1E296B870050E1B7 /* CoreDataManager.swift in Sources */,
 				8A0133D51E2657BA00641DB4 /* MasterTableViewCell.swift in Sources */,
 			);
